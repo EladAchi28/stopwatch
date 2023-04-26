@@ -15,8 +15,4 @@ let timerInterval2;
 let isRunning1 = false;
 let isRunning2 = false;
 
-function timeToString(time) {
-    let diffInHrs = time / 3600000;
-    let hh = Math.floor(diffInHrs);
-
-    let diffInMin = (diffInHrs -
+function timeToString(time)
