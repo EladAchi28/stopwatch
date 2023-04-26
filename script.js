@@ -100,9 +100,4 @@ function updateImprovementPercentage() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  startStop1.addEventListener('click', startStopTimer1);
-  reset1.addEventListener('click', resetTimer1);
-
-  startStop2.addEventListener('click', startStopTimer2);
-  reset2.addEventListener('click', resetTimer2);
-});
+  startStop1.addEventListener
