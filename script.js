@@ -90,3 +90,60 @@ document.addEventListener('DOMContentLoaded', () => {
   startStop2.addEventListener('click', startStopTimer2);
   reset2.addEventListener('click', resetTimer2);
 });
+
+
+
+
+
+
+
+// Add this new function to your existing script.js file
+function updateImprovementPercentage() {
+  if (elapsedTime1 > 0 && elapsedTime2 > 0) {
+    let improvement = (elapsedTime1 - elapsedTime2) / elapsedTime1;
+    let improvementPercentage = (improvement * 100).toFixed(2);
+    document.getElementById('improvementPercentage').textContent = `${improvementPercentage}%`;
+  } else {
+    document.getElementById('improvementPercentage').textContent = '0%';
+  }
+}
+
+// Update the resetTimer1 and resetTimer2 functions in your existing script.js file
+function resetTimer1() {
+  clearInterval(timerInterval1);
+  startStop1.textContent = 'Start';
+  isRunning1 = false;
+  elapsedTime1 = 0;
+  timer1.textContent = '00:00:00';
+  updateImprovementPercentage();
+}
+
+function resetTimer2() {
+  clearInterval(timerInterval2);
+  startStop2.textContent = 'Start';
+  isRunning2 = false;
+  elapsedTime2 = 0;
+  timer2.textContent = '00:00:00';
+  updateImprovementPercentage();
+}
+
+// Update the startStopTimer1 and startStopTimer2 functions in your existing script.js file
+function startStopTimer1() {
+  // ... (existing code) ...
+  } else {
+    clearInterval(timerInterval1);
+    startStop1.textContent = 'Start';
+    isRunning1 = false;
+    updateImprovementPercentage();
+  }
+}
+
+function startStopTimer2() {
+  // ... (existing code) ...
+  } else {
+    clearInterval(timerInterval2);
+    startStop2.textContent = 'Start';
+    isRunning2 = false;
+    updateImprovementPercentage();
+  }
+}
