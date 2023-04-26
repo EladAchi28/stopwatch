@@ -54,3 +54,29 @@ body {
 .button:hover {
     background-color: #d81e44;
 }
+
+
+/* Add these new rules to your existing CSS file */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.improvement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.improvement-title {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.percentage {
+  font-size: 24px;
+  color: #f42b5b;
+}
