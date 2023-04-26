@@ -85,7 +85,7 @@ $(document).ready(() => {
     return `${hours}:${minutes}:${seconds}:${milliseconds}`;
   }
 
-  function calculateImprovement() {
+ function calculateImprovement() {
   if (running2) {
     improvement.html('');
     return;
@@ -98,9 +98,7 @@ $(document).ready(() => {
     (improvementInSeconds / time1InSeconds) * 100
   );
   
-  const improvementText = `Improvement: <span style="color: #f42b5b;">${improvementPercentage}% (${formatTime(
-    improvementInSeconds * 1000
-  )})</span>`;
+  const improvementText = `Improvement: <span style="color: #f42b5b;">${improvementPercentage}%</span>`;
   
   improvement.html(improvementText);
 }
