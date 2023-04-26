@@ -9,25 +9,21 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div class="main-container">
-        <div class="stopwatch-container">
- <div class="stopwatch">
+    <div class="container">
+        <div class="stopwatch">
             <p class="stopwatch-title">Current Method</p>
             <div id="timer1" class="timer">00:00:00</div>
             <button id="startStop1" onclick="startStopTimer1()" class="start-stop-btn">Start</button>
             <button id="reset1" onclick="resetTimer1()" class="reset-btn">Reset</button>
         </div>
- <div class="stopwatch">
+        <div class="stopwatch">
             <p class="stopwatch-title">Modo</p>
             <div id="timer2" class="timer">00:00:00</div>
             <button id="startStop2" onclick="startStopTimer2()" class="start-stop-btn">Start</button>
             <button id="reset2" onclick="resetTimer2()" class="reset-btn">Reset</button>
         </div>
-        <div class="improvement">
-            <h2 class="improvement-title">Improvement</h2>
-            <div id="improvementPercentage" class="percentage">0%</div>
-        </div>
- </div>
+        <div id="improvement" class="improvement"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
