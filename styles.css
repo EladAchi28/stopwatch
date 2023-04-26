@@ -1,61 +1,65 @@
 body {
-    margin: 0;
-    font-family: 'Rubik', sans-serif;
-    background-image: url("https://raw.githubusercontent.com/EladAchi28/stopwatch/main/bg.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background-image: url('https://raw.githubusercontent.com/EladAchi28/stopwatch/main/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .stopwatch-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 100px;
-    width: 100%;
-    max-width: 800px;
-    padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 50px;
 }
 
 .stopwatch {
-    background-color: #13171a;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .method-title {
-    font-size: 30px;
-    color: white;
-    margin-bottom: 10px;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 10px;
 }
 
 .time {
-    font-size: 24px;
-    color: #f42b5b;
-    margin-bottom: 20px;
+  font-size: 24px;
+  color: #f42b5b;
+  background-color: #13171a;
+  padding: 10px 20px;
+  margin-bottom: 10px;
 }
 
 .button {
-    font-size: 18px;
-    font-family: 'Rubik', sans-serif;
-    color: white;
-    background-color: #f42b5b;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  padding: 10px 20px;
+  background-color: #f42b5b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
-.button:hover {
-    background-color: #d81e44;
+.start-stop {
+  margin-bottom: 5px;
 }
 
-/* Add these rules to your existing CSS file */
 .improvement {
   display: flex;
   flex-direction: column;
@@ -71,5 +75,3 @@ body {
 
 .percentage {
   font-size: 24px;
-  color: #f42b5b;
-}
