@@ -11,24 +11,23 @@
 <body>
     <div class="main-container">
         <div class="stopwatch-container">
-            <div class="stopwatch">
-                <h2 class="method-title">Current Method</h2>
-                <div id="timer1" class="time">00:00:00</div>
-                <button id="startStop1" class="button start-stop">Start</button>
-                <button id="reset1" class="button reset">Reset</button>
-            </div>
-            <div class="stopwatch">
-                <h2 class="method-title">Modo</h2>
-                <div id="timer2" class="time">00:00:00</div>
-                <button id="startStop2" class="button start-stop">Start</button>
-                <button id="reset2" class="button reset">Reset</button>
-            </div>
+ <div class="stopwatch">
+            <p class="stopwatch-title">Current Method</p>
+            <div id="timer1" class="timer">00:00:00</div>
+            <button id="startStop1" onclick="startStopTimer1()" class="start-stop-btn">Start</button>
+            <button id="reset1" onclick="resetTimer1()" class="reset-btn">Reset</button>
+        </div>
+ <div class="stopwatch">
+            <p class="stopwatch-title">Modo</p>
+            <div id="timer2" class="timer">00:00:00</div>
+            <button id="startStop2" onclick="startStopTimer2()" class="start-stop-btn">Start</button>
+            <button id="reset2" onclick="resetTimer2()" class="reset-btn">Reset</button>
         </div>
         <div class="improvement">
             <h2 class="improvement-title">Improvement</h2>
             <div id="improvementPercentage" class="percentage">0%</div>
         </div>
-    </div>
+ </div>
     <script src="script.js"></script>
 </body>
 </html>
