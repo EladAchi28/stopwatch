@@ -43,4 +43,51 @@ function startStopTimer1() {
     interval1 = setInterval(updateTime1, 10);
     startStop1.textContent = 'Stop';
   }
-  running1 = !running1
+  running1 = !running1;
+}
+
+function startStopTimer2() {
+  if (running2) {
+    clearInterval(interval2);
+    startStop2.textContent = 'Start';
+  } else {
+    interval2 = setInterval(updateTime2, 10);
+    startStop2.textContent = 'Stop';
+  }
+  running2 = !running2;
+}
+
+function resetTimer1() {
+  clearInterval(interval1);
+  time1 = 0;
+  timer1.textContent = '00:00:00';
+  startStop1.textContent = 'Start';
+  running1 = false;
+}
+
+function resetTimer2() {
+  clearInterval(interval2);
+  time2 = 0;
+  timer2.textContent = '00:00:00';
+  startStop2.textContent = 'Start';
+  running2 = false;
+}
+
+function calculateImprovement() {
+  const time1Arr = timer1.textContent.split(':');
+  const time1Seconds = (+time1Arr[0]) * 60 * 60 + (+time1Arr[1]) * 60 + (+time1Arr[2]);
+  
+  const time2Arr = timer2.textContent.split(':');
+  const time2Seconds = (+time2Arr[0]) * 60 * 60 + (+time2Arr[1]) * 60 + (+time2Arr[2]);
+  
+  const improvementPercent = Math.round(((time1Seconds - time2Seconds) / time1Seconds) * 100);
+  improvement.textContent = `Improvement: ${improvementPercent}%`;
+}
+
+startStop1.addEventListener('click', startStopTimer1);
+reset1.addEventListener('click', resetTimer1);
+
+startStop2.addEventListener('click', startStopTimer2);
+reset2.addEventListener('click', resetTimer2);
+
+setInterval(calculateImprovement, 100);
