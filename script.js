@@ -31,4 +31,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let formattedMM = mm.toString().padStart(2, '0');
     let formattedSS = ss.toString().padStart(2, '0');
-    let formattedMS = ms.toString
+    let formattedMS = ms.toString().padStart(2, '0');
+
+    return `${formattedMM}:${formattedSS}:${formattedMS}`;
+  }
+
+  function startStopTimer1() {
+    if (!isRunning1) {
+      startTime1 = Date.now() - elapsedTime1;
+      timerInterval1 = setInterval(function printTime() {
+        elapsedTime1 = Date.now() - startTime1;
+        timer1.textContent = timeToString(elapsedTime1);
+      }, 10);
+      startStop1.textContent = 'Stop';
+      isRunning1 = true;
+    } else {
+      clearInterval(timerInterval1);
+      startStop1.textContent = 'Start';
+      isRunning1 = false;
+    }
+  }
+
+  function resetTimer1() {
+    clearInterval(timerInterval1);
+    startStop1.textContent = 'Start';
+    isRunning1 = false;
+    elapsedTime1 = 0;
+    timer1.textContent = '00:00:00';
+  }
+
+  function startStopTimer2() {
+    if (!isRunning2) {
+      startTime2 = Date.now() - elapsedTime2;
+      timerInterval2 = setInterval(function printTime() {
+        elapsedTime2 = Date.now() - startTime2;
+        timer2.textContent = timeToString(elapsedTime2);
+      }, 10);
+      startStop2.textContent = 'Stop';
+      isRunning2 = true;
+    } else {
+      clearInterval(timerInterval2);
+      startStop2.textContent = 'Start';
+      isRunning2 = false;
+    }
+  }
+
+  function resetTimer2() {
+    clearInterval(timerInterval2);
+    startStop2.textContent = 'Start';
+    isRunning2 = false;
+    elapsedTime2 = 0;
+    timer2.textContent = '00:00:00';
+  }
+
+  startStop1.addEventListener('click', startStopTimer1);
+  reset1.addEventListener('click', resetTimer1);
+
+  startStop2.addEventListener('click', startStopTimer2);
+  reset2.addEventListener('click', resetTimer2);
+});
