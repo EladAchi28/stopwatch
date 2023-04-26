@@ -11,6 +11,7 @@
         background-image: url('https://raw.githubusercontent.com/EladAchi28/stopwatch/main/bg.jpg');
         background-size: cover;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
@@ -22,20 +23,22 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 50px;
       }
 
       .stopwatch {
         background-color: #13171a;
         color: #f42b5b;
         padding: 10px;
-        margin: 0 100px;
+        margin: 0 50px;
         text-align: center;
-        width: 200px;
+        width: 250px;
       }
 
       .stopwatch h1 {
         margin: 0;
         font-size: 30px;
+        color: white;
       }
 
       .stopwatch .btn {
@@ -44,6 +47,7 @@
         color: white;
         padding: 5px 15px;
         margin-top: 10px;
+        margin-bottom: 10px;
         cursor: pointer;
       }
 
@@ -53,21 +57,29 @@
         margin-top: 10px;
         text-align: center;
       }
+
+      #improvement span {
+        color: #f42b5b;
+      }
     </style>
   </head>
   <body>
     <div class="stopwatch-container">
       <div class="stopwatch">
-        <h1>Current Method</h1>
+        <h1 style="color: white;">Current Method</h1>
         <div id="timer1">00:00:00</div>
-        <button id="startStop1" class="btn">Start</button>
-        <button id="reset1" class="btn">Reset</button>
+        <div>
+          <button id="startStop1" class="btn">Start</button>
+          <button id="reset1" class="btn">Reset</button>
+        </div>
       </div>
       <div class="stopwatch">
-        <h1>Modo</h1>
+        <h1 style="color: white;">Modo</h1>
         <div id="timer2">00:00:00</div>
-        <button id="startStop2" class="btn">Start</button>
-        <button id="reset2" class="btn">Reset</button>
+        <div>
+          <button id="startStop2" class="btn">Start</button>
+          <button id="reset2" class="btn">Reset</button>
+        </div>
       </div>
     </div>
     <div id="improvement"></div>
