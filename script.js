@@ -93,10 +93,11 @@ $(document).ready(() => {
     const improvementPercentage = Math.round(
       (improvementInSeconds / time1InSeconds) * 100
     );
-    const improvementText = `Improvement: <span style="color: #f42b5b;">${improvementPercentage}% (${formatTime(improvementInSeconds * 1000)})</span>`;
+    const improvementText = `Improvement: <span style="color: #f42b5b; font-family: Rubik">${improvementPercentage}% (${formatTime(improvementInSeconds * 1000)})</span>`;
     improvement.html(improvementText);
   }
 }
+
 
 
   startStop1.on('click', startStopTimer1);
