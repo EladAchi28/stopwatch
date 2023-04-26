@@ -11,6 +11,7 @@
         background-image: url('https://raw.githubusercontent.com/EladAchi28/stopwatch/main/bg.jpg');
         background-size: cover;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
@@ -22,6 +23,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 50px;
       }
 
       .stopwatch {
@@ -44,6 +46,7 @@
         color: white;
         padding: 5px 15px;
         margin-top: 10px;
+        margin-bottom: 10px;
         cursor: pointer;
       }
 
@@ -53,6 +56,10 @@
         margin-top: 10px;
         text-align: center;
       }
+
+      #improvement span {
+        color: #f42b5b;
+      }
     </style>
   </head>
   <body>
@@ -60,14 +67,18 @@
       <div class="stopwatch">
         <h1>Current Method</h1>
         <div id="timer1">00:00:00</div>
-        <button id="startStop1" class="btn">Start</button>
-        <button id="reset1" class="btn">Reset</button>
+        <div>
+          <button id="startStop1" class="btn">Start</button>
+          <button id="reset1" class="btn">Reset</button>
+        </div>
       </div>
       <div class="stopwatch">
         <h1>Modo</h1>
         <div id="timer2">00:00:00</div>
-        <button id="startStop2" class="btn">Start</button>
-        <button id="reset2" class="btn">Reset</button>
+        <div>
+          <button id="startStop2" class="btn">Start</button>
+          <button id="reset2" class="btn">Reset</button>
+        </div>
       </div>
     </div>
     <div id="improvement"></div>
