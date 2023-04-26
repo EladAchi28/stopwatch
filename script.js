@@ -1,11 +1,11 @@
-$(document).ready(function () {
-  const timer1 = $('#timer1');
-  const startStop1 = $('#startStop1');
-  const reset1 = $('#reset1');
+const timer1 = document.getElementById('timer1');
+const startStop1 = document.getElementById('startStop1');
+const reset1 = document.getElementById('reset1');
 
-  const timer2 = $('#timer2');
-  const startStop2 = $('#startStop2');
-  const reset2 = $('#reset2');
+const timer2 = document.getElementById('timer2');
+const startStop2 = document.getElementById('startStop2');
+const reset2 = document.getElementById('reset2');
+
 
 
 let isRunning1 = false;
@@ -100,11 +100,3 @@ function updateImprovementPercentage() {
     document.getElementById('improvementPercentage').textContent = '0%';
   }
 }
-
-document.addEventListener('DOMContentLoaded', () => {  
- startStop1.on('click', startStopTimer1);
-  reset1.on('click', resetTimer1);
-
-  startStop2.on('click', startStopTimer2);
-  reset2.on('click', resetTimer2);
-});
