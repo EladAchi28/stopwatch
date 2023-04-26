@@ -87,7 +87,7 @@ $(document).ready(() => {
 
  function calculateImprovement() {
   if (running2) {
-    improvement.html('');
+    improvement.html('Improvement:');
     return;
   }
   
@@ -98,10 +98,13 @@ $(document).ready(() => {
     (improvementInSeconds / time1InSeconds) * 100
   );
   
-  const improvementText = `Improvement: <span style="color: #f42b5b;">${improvementPercentage}%</span>`;
+  const improvementText = `Improvement: <span style="color: #f42b5b;">${improvementPercentage}% (${formatTime(
+    improvementInSeconds * 1000
+  )})</span>`;
   
   improvement.html(improvementText);
 }
+
   startStop1.on('click', startStopTimer1);
   reset1.on('click', resetTimer1);
 
