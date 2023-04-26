@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stopwatch</title>
+    <title>Stopwatches</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="stopwatch">
-        <div id="timer" class="time">00:00:00</div>
-        <button id="startStop" class="button">Start</button>
+    <div class="stopwatch-container">
+        <div class="stopwatch">
+            <h2 class="method-title">Current Method</h2>
+            <div id="timer1" class="time">00:00:00</div>
+            <button id="startStop1" class="button start-stop">Start</button>
+            <button id="reset1" class="button reset">Reset</button>
+        </div>
+        <div class="stopwatch">
+            <h2 class="method-title">Modo</h2>
+            <div id="timer2" class="time">00:00:00</div>
+            <button id="startStop2" class="button start-stop">Start</button>
+            <button id="reset2" class="button reset">Reset</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
