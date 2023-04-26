@@ -1,19 +1,23 @@
 body {
     margin: 0;
     font-family: 'Rubik', sans-serif;
-    background-image: url("https://drive.google.com/uc?id=1PvN1e043YKT7XBtyixKbZrQ2NaJpObQn");
+    background-image: url("https://raw.githubusercontent.com/EladAchi28/stopwatch/main/bg.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
 }
 
 .stopwatch-container {
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-between;
+    gap: 200px;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 50px;
 }
 
 .stopwatch {
