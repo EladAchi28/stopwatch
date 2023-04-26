@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stopwatches</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="stopwatch">
-            <p class="stopwatch-title">Current Method</p>
-            <div id="timer1" class="timer">00:00:00</div>
-            <button id="startStop1" class="start-stop-btn" onclick="startStopTimer1()">Start</button>
-            <button id="reset1" class="reset-btn" onclick="resetTimer1()">Reset</button>
-        </div>
-        <div class="stopwatch">
-            <p class="stopwatch-title">Modo</p>
-            <div id="timer2" class="timer">00:00:00</div>
-            <button id="startStop2" class="start-stop-btn" onclick="startStopTimer2()">Start</button>
-            <button id="reset2" class="reset-btn" onclick="resetTimer2()">Reset</button>
-        </div>
-        <div id="improvement" class="improvement"></div>
+  <div class="container">
+    <div class="stopwatch">
+      <h2 class="stopwatch-title">Current Method</h2>
+      <p class="timer" id="timer1">00:00:00</p>
+      <div class="buttons">
+        <button class="start-stop-btn" id="startStop1">Start</button>
+        <button class="reset-btn" id="reset1">Reset</button>
+      </div>
     </div>
-    <script src="script.js"></script>
+    <div class="stopwatch">
+      <h2 class="stopwatch-title">Modo</h2>
+      <p class="timer" id="timer2">00:00:00</p>
+      <div class="buttons">
+        <button class="start-stop-btn" id="startStop2">Start</button>
+        <button class="reset-btn" id="reset2">Reset</button>
+      </div>
+    </div>
+  </div>
+  <p class="improvement" id="improvement"></p>
+  <script src="script.js"></script>
 </body>
 </html>
