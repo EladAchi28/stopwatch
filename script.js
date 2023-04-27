@@ -1,3 +1,4 @@
+<script>
 $(document).ready(() => {
 const currentMethod = $('.stopwatch').eq(0).find('.stopwatch__title');
 const currentMood = $('.stopwatch').eq(1).find('.stopwatch__title');
