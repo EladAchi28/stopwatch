@@ -5,14 +5,14 @@ const currentMood = $('.stopwatch').eq(1).find('.stopwatch__title');
 const stopwatch1 = $('.stopwatch').eq(0);
 const stopwatch2 = $('.stopwatch').eq(1);
 
-const startStop1 = stopwatch1.find('#startStop1');
-const startStop2 = stopwatch2.find('#startStop2');
+const startStop1 = stopwatch1.find('#startTimer1');
+const startStop2 = stopwatch2.find('#startTimer2');
 
-const reset1 = stopwatch1.find('#reset1');
-const reset2 = stopwatch2.find('#reset2');
+const reset1 = stopwatch1.find('#resetTimer1');
+const reset2 = stopwatch2.find('#resetTimer2');
 
-const time1Display = stopwatch1.find('.stopwatch__time');
-const time2Display = stopwatch2.find('.stopwatch__time');
+const time1Display = stopwatch1.find('.stopTimer1');
+const time2Display = stopwatch2.find('.stopTimer2');
 
 const improvement = $('.improvement__result');
 
