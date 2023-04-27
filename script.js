@@ -168,3 +168,4 @@ $(document).ready(() => {
     improvement.html(improvementText);
   }
 });
+<script>
