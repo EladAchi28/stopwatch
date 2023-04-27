@@ -14,8 +14,7 @@ $(document).ready(() => {
     startStop2 = $('#startStop2'),
     reset1 = $('#reset1'),
     reset2 = $('#reset2'),
-    improvement = $('#improvement'),
-    solutionBtn = $('#solutionBtn');
+    improvement = $('#improvement');
 
   function updateTime1() {
     const currentTime = Date.now();
@@ -104,5 +103,5 @@ $(document).ready(() => {
   startStop2.on('click', startStopTimer2);
   reset2.on('click', resetTimer2);
 
-  solutionBtn.on('click', () => {
-    window.location.href = 'https://docs
+  $('#solutionBtn').on('click', () => {
+    window.location.href = 'https://docs.google.com/presentation/d/1A7fNQXma
