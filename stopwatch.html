@@ -5,35 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+  <link rel="stylesheet" href="styles.css">
   <title>Stopwatch</title>
-  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="container">
-    <h1 class="title">Stopwatch</h1>
-    <div class="stopwatch">
-      <div class="stopwatch-current">
-        <h2 class="stopwatch-title">Current Method</h2>
-        <p id="timer1" class="stopwatch-timer">00:00:00</p>
-        <div class="stopwatch-controls">
-          <button id="startStop1" class="stopwatch-btn">Start</button>
-          <button id="reset1" class="stopwatch-btn">Reset</button>
-        </div>
+    <div class="current">
+      <div class="current__method">
+        Current Method: <span class="current__method--value">None</span>
       </div>
-      <div class="stopwatch-mood">
-        <h2 class="stopwatch-title">Current Mood</h2>
-        <p id="timer2" class="stopwatch-timer">00:00:00</p>
-        <div class="stopwatch-controls">
-          <button id="startStop2" class="stopwatch-btn">Start</button>
-          <button id="reset2" class="stopwatch-btn">Reset</button>
-        </div>
-        <div id="improvement" class="stopwatch-improvement"></div>
+      <div class="current__mood">
+        Current Mood: <span class="current__mood--value">None</span>
       </div>
     </div>
-    <button id="solutionBtn" class="solution-btn">The Solution</button>
+
+    <div class="stopwatch">
+      <div class="stopwatch__header">Stopwatch</div>
+      <div class="stopwatch__display">
+        <div class="timer" id="timer1">00:00:00</div>
+        <div class="timer" id="timer2">00:00:00</div>
+      </div>
+      <div class="stopwatch__buttons">
+        <button class="btn" id="startStop1">Start</button>
+        <button class="btn" id="reset1">Reset</button>
+        <button class="btn" id="startStop2">Start</button>
+        <button class="btn" id="reset2">Reset</button>
+      </div>
+      <div class="stopwatch__improvement" id="improvement"></div>
+    </div>
+
+    <button class="btn" id="solutionBtn">The Solution</button>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="script.js"></script>
 </body>
 
