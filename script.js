@@ -104,4 +104,7 @@ $(document).ready(() => {
   reset2.on('click', resetTimer2);
 
   $('#solutionBtn').on('click', () => {
-    window.location.href = 'https://docs.google.com/presentation/d/1A7fNQX
+    window.location.href = 'https://docs.google.com/presentation/d/1A7fNQXmaXX3sYC_lhAn2J0t_BhSIFKW3CCDDDgucR08/edit#slide=id.g23a1fb12a21_3_50';
+  });
+
+});
