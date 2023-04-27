@@ -1,39 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
-  <script src="script.js"></script>
-  <meta charset="UTF-8">
-  <title>Stopwatch</title>
-</head>
-<body>
-  <div class="background-image"></div>
-  <div class="container">
-    <div class="stopwatch__wrapper">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url('https://raw.githubusercontent.com/EladAchi28/stopwatch/main/bg.jpg');
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: 'Rubik', sans-serif;
+        font-size: 24px;
+      }
+
+      .stopwatch-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      .stopwatch {
+        background-color: #13171a;
+        color: #f42b5b;
+        padding: 10px;
+        margin: 0 50px;
+        text-align: center;
+        width: 250px;
+      }
+
+      .stopwatch h1 {
+        margin: 0;
+        font-size: 30px;
+        color: white;
+      }
+
+      .stopwatch .btn {
+        background-color: #f42b5b;
+        border: none;
+        color: white;
+        padding: 5px 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+
+      #improvement {
+        color: white;
+        font-size: 24px;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      #improvement span {
+        color: #f42b5b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stopwatch-container">
       <div class="stopwatch">
-        <h2 class="stopwatch__title">Current Method</h2>
-        <p class="stopwatch__time">00:00:00</p>
-        <div class="stopwatch__buttons">
-          <button id="startStop1" class="stopwatch__button">Start</button>
-          <button id="reset1" class="stopwatch__button">Reset</button>
+        <h1 style="color: white;">Current Method</h1>
+        <div id="timer1">00:00:00</div>
+        <div>
+          <button id="startStop1" class="btn">Start</button>
+          <button id="reset1" class="btn">Reset</button>
         </div>
       </div>
       <div class="stopwatch">
-        <h2 class="stopwatch__title">Modo</h2>
-        <p class="stopwatch__time">00:00:00</p>
-        <div class="stopwatch__buttons">
-          <button id="startStop2" class="stopwatch__button">Start</button>
-          <button id="reset2" class="stopwatch__button">Reset</button>
+        <h1 style="color: white;">Modo</h1>
+        <div id="timer2">00:00:00</div>
+        <div>
+          <button id="startStop2" class="btn">Start</button>
+          <button id="reset2" class="btn">Reset</button>
         </div>
       </div>
     </div>
-    <div class="improvement__wrapper">
-      <p class="improvement__text">Improvement:</p>
-      <p class="improvement__result"></p>
-      <button id="solutionBtn" class="solution__button">The Solution</button>
-    </div>
-  </div>
+   <div id="improvement"></div> <!-- Add this line for the improvement section -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="script.js"></script>
 </body>
-</html>
