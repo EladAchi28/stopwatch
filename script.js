@@ -14,7 +14,10 @@ $(document).ready(() => {
     startStop2 = $('#startStop2'),
     reset1 = $('#reset1'),
     reset2 = $('#reset2'),
-    improvement = $('#improvement');
+    improvement = $('#improvement'),
+    currentMethod = $('#currentMethod'),
+    currentMood = $('#currentMood'),
+    solutionBtn = $('#solutionBtn');
 
   function updateTime1() {
     const currentTime = Date.now();
@@ -97,13 +100,24 @@ $(document).ready(() => {
     improvement.html(improvementText);
   }
 
-  startStop1.click(startStopTimer1);
-  reset1.click(resetTimer1);
+  startStop1.on('click', startStopTimer1);
+  reset1.on('click', resetTimer1);
 
-  startStop2.click(startStopTimer2);
-  reset2.click(resetTimer2);
+  startStop2.on('click', startStopTimer2);
+  reset2.on('click', resetTimer2);
 
-  $('#solutionBtn').on('click', () => {
+   currentMethod.css('color', '#fff');
+  currentMood.css('color', '#fff');
+
+  solutionBtn.css({
+    'margin-top': '50px',
+    'margin-bottom': '50px',
+    'display': 'block',
+    'margin-left': 'auto',
+    'margin-right': 'auto'
+  });
+  
+  solutionBtn.on('click', () => {
     window.location.href = 'https://docs.google.com/presentation/d/1A7fNQXmaXX3sYC_lhAn2J0t_BhSIFKW3CCDDDgucR08/edit#slide=id.g23a1fb12a21_3_50';
   });
 
