@@ -1,41 +1,38 @@
-/* Global styles */
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
+html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Rubik', sans-serif;
-  font-size: 16px;
-  color: #fff;
+  height: 100%;
 }
 
-/* Container */
-.container {
+body {
+  background-image: url('https://raw.githubusercontent.com/EladAchi28/stopwatch/main/bg.jpg');
+  background-size: cover;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  background-color: #1b1b1b;
 }
 
-/* Stopwatch */
 .stopwatch {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 50px;
+  background-color: #13171a;
+  padding: 20px;
+  display: inline-block;
+  margin: 100px;
+  position: relative;
 }
 
-.stopwatch__heading {
-  font-size: 60px;
-  font-weight: bold;
+.stopwatch__title {
+  color: #fff;
+  font-family: 'Rubik', sans-serif;
+  font-size: 30px;
+  margin-bottom: 10px;
   text-align: center;
-  margin-bottom: 20px;
+}
+
+.stopwatch__time {
+  color: #f42b5b;
+  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
+  text-align: center;
 }
 
 .stopwatch__buttons {
@@ -45,78 +42,64 @@ body {
 }
 
 .stopwatch__button {
-  font-size: 18px;
-  font-weight: bold;
+  background-color: #f42b5b;
+  color: #fff;
+  border: none;
   padding: 10px 20px;
-  border-radius: 10px;
-  background-color: #fff;
-  color: #1b1b1b;
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif;
   cursor: pointer;
 }
 
 .stopwatch__button:hover {
-  background-color: #f42b5b;
-  color: #fff;
+  opacity: 0.8;
 }
 
-.stopwatch__timer {
-  font-size: 100px;
-  font-weight: bold;
+.currentMethod {
+  color: #fff;
+  font-family: 'Rubik', sans-serif;
+  font-size: 30px;
   text-align: center;
+  margin-top: 20px;
+}
+
+.currentMood {
+  color: #fff;
+  font-family: 'Rubik', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .improvement {
-  font-size: 20px;
-  margin-top: 20px;
-  font-weight: bold;
-  text-align: center;
+  font-size: 30px;
+  font-family: 'Rubik', sans-serif;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .improvement span {
-  font-weight: normal;
-  color: #f42b5b;
-  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
 }
 
-/* Solution button */
-.solution-btn {
-  font-size: 24px;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 10px;
+.calculator {
+  font-size: 30px;
+  font-family: 'Rubik', sans-serif;
+  color: #f42b5b;
+  margin-bottom: 20px;
+}
+
+.solutionBtn {
   background-color: #f42b5b;
   color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif;
+  margin-top: 20px;
   cursor: pointer;
-  margin-top: 50px;
 }
 
-.solution-btn:hover {
-  background-color: #fff;
-  color: #f42b5b;
-}
-
-.solution-btn a {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Media queries */
-@media (max-width: 768px) {
-  .stopwatch__timer {
-    font-size: 80px;
-  }
-
-  .improvement {
-    font-size: 16px;
-  }
-
-  .stopwatch__button {
-    font-size: 16px;
-    padding: 8px 16px;
-  }
-
-  .solution-btn {
-    font-size: 20px;
-    padding: 8px 16px;
-  }
+.solutionBtn:hover {
+  opacity: 0.8;
 }
