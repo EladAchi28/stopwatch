@@ -51,19 +51,21 @@ $(document).ready(() => {
   }
 
   function startStopTimer2() {
-    if (running2) {
-      clearInterval(interval2);
-      startStop2.text('Start');
-      if (time2 > 0) {
-        calculateImprovement();
-      }
-    } else {
-      startTime2 = Date.now();
-      interval2 = setInterval(updateTime2, 10);
-      startStop2.text('Stop');
+  if (running2) {
+    clearInterval(interval2);
+    startStop2.text('Start');
+    if (time2 > 0 && !running1) {
+      const improvementPercentage = calculateImprovement(time1, time2);
+      improvement.text(`${improvementPercentage}%`);
     }
-    running2 = !running2;
+  } else {
+    startTime2 = Date.now();
+    interval2 = setInterval(updateTime2, 10);
+    startStop2.text('Stop');
   }
+  running2 = !running2;
+}
+
 
   function resetTimer2() {
     clearInterval(interval2);
@@ -84,14 +86,16 @@ $(document).ready(() => {
     return `${minutes}:${seconds}:${milliseconds}`;
   }
 
- function calculateImprovement() {
-  if (!running2) {
-    const time1InSeconds = time1 / 1000;
-    const time2InSeconds = time2 / 1000;
-    const improvementInSeconds = time1InSeconds - time2InSeconds;
-    const improvementPercentage = Math.round(
-      (improvementInSeconds / time1InSeconds) * 100
-    );
+function calculateImprovement(time1, time2) {
+  const time1Milliseconds = time1;
+  const time2Milliseconds = time2;
+
+  const improvement = 100 * (time1Milliseconds - time2Milliseconds) / time1Milliseconds;
+  
+  return improvement.toFixed(2);
+}
+
+}
     const improvementText = `Improvement: <span style="color: #f42b5b; font-family: Rubik">${improvementPercentage}% (${formatTime(improvementInSeconds * 1000)})</span>`;
     improvement.html(improvementText);
   }
