@@ -84,19 +84,18 @@ $(document).ready(() => {
     return `${minutes}:${seconds}:${milliseconds}`;
   }
 
- function calculateImprovement() {
-  if (!running2) {
-    const time1InSeconds = time1 / 1000;
-    const time2InSeconds = time2 / 1000;
-    const improvementInSeconds = time1InSeconds - time2InSeconds;
-    const improvementPercentage = Math.round(
-      (improvementInSeconds / time1InSeconds) * 100
-    );
-    const improvementText = `Improvement: <span style="color: #f42b5b; font-family: Rubik">${improvementPercentage}% (${formatTime(improvementInSeconds * 1000)})</span>`;
-    improvement.html(improvementText);
-  }
+function calculateImprovement() {
+  const time1InSeconds = time1 / 1000;
+  const time2InSeconds = time2 / 1000;
+  const improvementInSeconds = time1InSeconds - time2InSeconds;
+  const improvementPercentage = Math.round(
+    (improvementInSeconds / time1InSeconds) * 100
+  );
+  const improvementText = `Improvement: <span style="color: #f42b5b; font-family: Rubik">${improvementPercentage}% (${formatTime(
+    improvementInSeconds * 1000
+  )})</span>`;
+  improvement.html(improvementText);
 }
-
 
 
   startStop1.on('click', startStopTimer1);
