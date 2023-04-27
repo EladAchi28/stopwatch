@@ -104,4 +104,4 @@ $(document).ready(() => {
   reset2.on('click', resetTimer2);
 
   $('#solutionBtn').on('click', () => {
-    window.location.href = 'https://docs.google.com/presentation/d/1A7fNQXma
+    window.location.href = 'https://docs.google.com/presentation/d/1A7fNQX
