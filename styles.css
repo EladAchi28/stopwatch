@@ -2,15 +2,15 @@ body {
   background-image: url("https://raw.githubusercontent.com/EladAchi28/stopwatch/main/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   margin: 0;
 }
 
-.stopwatch-container {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  height: 100vh;
 }
 
 .stopwatch {
@@ -28,20 +28,20 @@ body {
   width: 250px;
 }
 
-.stopwatch h1 {
+.stopwatch-title {
   font-size: 30px;
   font-weight: bold;
   margin: 0;
 }
 
-.stopwatch #timer1,
-.stopwatch #timer2 {
+.timer {
   font-size: 24px;
   font-weight: bold;
   margin: 20px 0;
 }
 
-.stopwatch .btn {
+.start-stop-btn,
+.reset-btn {
   background-color: #f42b5b;
   border: none;
   border-radius: 5px;
@@ -53,18 +53,4 @@ body {
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  transition: background-color 0.3s;
-  width: 80px;
-}
-
-.stopwatch .btn:hover {
-  background-color: #ca243d;
-}
-
-.improvement {
-  color: #f42b5b;
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 20px;
-  text-align: center;
-}
+  transition: background-color 0.3s
