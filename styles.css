@@ -1,105 +1,69 @@
-html, body {
+body {
+  background-image: url("https://raw.githubusercontent.com/EladAchi28/stopwatch/main/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Rubik', sans-serif;
   margin: 0;
-  padding: 0;
-  height: 100%;
 }
 
-body {
-  background-image: url('https://raw.githubusercontent.com/EladAchi28/stopwatch/main/bg.jpg');
-  background-size: cover;
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .stopwatch {
   background-color: #13171a;
-  padding: 20px;
-  display: inline-block;
-  margin: 100px;
-  position: relative;
-}
-
-.stopwatch__title {
-  color: #fff;
-  font-family: 'Rubik', sans-serif;
-  font-size: 30px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.stopwatch__time {
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   color: #f42b5b;
-  font-family: 'Rubik', sans-serif;
-  font-size: 24px;
-  text-align: center;
-}
-
-.stopwatch__buttons {
-  margin-top: 20px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 100px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
 }
 
-.stopwatch__button {
+.stopwatch-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.timer {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.start-stop-btn, .reset-btn {
   background-color: #f42b5b;
-  color: #fff;
   border: none;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-family: 'Rubik', sans-serif;
+  border-radius: 5px;
+  color: #fff;
   cursor: pointer;
-}
-
-.stopwatch__button:hover {
-  opacity: 0.8;
-}
-
-.currentMethod {
-  color: #fff;
-  font-family: 'Rubik', sans-serif;
-  font-size: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px 20px;
   text-align: center;
-  margin-top: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  width: 80px;
 }
 
-.currentMood {
-  color: #fff;
-  font-family: 'Rubik', sans-serif;
-  font-size: 30px;
-  text-align: center;
-  margin-top: 20px;
+.start-stop-btn:hover, .reset-btn:hover {
+  background-color: #ca243d;
 }
 
 .improvement {
-  font-size: 30px;
-  font-family: 'Rubik', sans-serif;
-  color: #fff;
-  margin-bottom: 20px;
-}
-
-.improvement span {
-  font-weight: bold;
-}
-
-.calculator {
-  font-size: 30px;
-  font-family: 'Rubik', sans-serif;
   color: #f42b5b;
-  margin-bottom: 20px;
-}
-
-.solutionBtn {
-  background-color: #f42b5b;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
   margin-top: 20px;
-  cursor: pointer;
-}
-
-.solutionBtn:hover {
-  opacity: 0.8;
+  text-align: center;
 }
