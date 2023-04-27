@@ -104,3 +104,8 @@ function calculateImprovement() {
   startStop2.on('click', startStopTimer2);
   reset2.on('click', resetTimer2);
 });
+
+
+solutionBtn.on('click', () => {
+  window.location.href = 'https://docs.google.com/presentation/d/1A7fNQXmaXX3sYC_lhAn2J0t_BhSIFKW3CCDDDgucR08/present?start=true&loop=true&delayms=5000#slide=id.g23a1fb12a21_3_50';
+});
