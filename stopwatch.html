@@ -4,41 +4,137 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stopwatch</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-image: url("https://raw.githubusercontent.com/EladAchi28/stopwatch/main/bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: "Rubik", sans-serif;
+        margin: 0;
+      }
+
+      .stopwatch-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .stopwatch {
+        background-color: #13171a;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+        color: #f42b5b;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 100px;
+        padding: 20px;
+        text-align: center;
+        width: 250px;
+      }
+
+      .stopwatch-title {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .timer {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+
+      .start-stop-btn,
+      .reset-btn {
+        background-color: #f42b5b;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        width: 80px;
+      }
+
+      .start-stop-btn:hover,
+      .reset-btn:hover {
+        background-color: #ca243d;
+      }
+
+      .improvement {
+        color: #f42b5b;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .improvement-container {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .button-container {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .btn {
+        background-color: #f42b5b;
+        border: none;
+        color: white;
+        padding: 5px 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #ca243d;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <div class="stopwatch" id="stopwatch1">
-        <h2 class="stopwatch-title">Current Method</h2>
-        <div class="timer" id="timer1">00:00:00</div>
-        <button class="start-stop-btn" id="startStop1">Start</button>
-        <button class="reset-btn" id="reset1">Reset</button>
+    <div class="stopwatch-container">
+      <div class="stopwatch">
+        <h1 class="stopwatch-title">Current Method</h1>
+        <div id="timer1" class="timer">00:00:00</div>
+        <div>
+          <button id="startStop1" class="start-stop-btn">Start</button>
+          <button id="reset1" class="reset-btn">Reset</button>
+        </div>
       </div>
-
-      <div class="stopwatch" id="stopwatch2">
-        <h2 class="stopwatch-title">Modo</h2>
-        <div class="timer" id="timer2">00:00:00</div>
-        <button class="start-stop-btn" id="startStop2">Start</button>
-        <button class="reset-btn" id="reset2">Reset</button>
+      <div class="stopwatch">
+        <h1 class="stopwatch-title">Modo</h1>
+        <div id="timer2" class="timer">00:00:00</div>
+        <div>
+          <button id="startStop2" class="start-stop-btn">Start</button>
+          <button id="reset2" class="reset-btn">Reset</button>
+        </div>
       </div>
     </div>
-
     <div class="improvement-container">
-      <div class="improvement" id="improvement"></div>
-      <button class="btn" id="calculateImprovementBtn">
-        Calculate Improvement
-      </button>
-    </div>
+  <div class="improvement" id="improvement"></div>
+  <button id="calculateImprovementBtn" class="btn">Calculate Improvement</button>
+</div>
 
-    <div class="button-container">
-      <button class="btn" id="solutionBtn">The Solution</button>
-    </div>
+<div class="button-container">
+  <button id="solutionBtn" class="btn">The Solution</button>
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
+      </body>
 </html>
