@@ -15,7 +15,6 @@ $(document).ready(() => {
     reset1 = $('#reset1'),
     reset2 = $('#reset2'),
     improvement = $('#improvement'),
-    calculateImprovementBtn = $('#calculateImprovementBtn'),
     solutionBtn = $('#solutionBtn');
 
   function updateTime1() {
@@ -93,4 +92,17 @@ $(document).ready(() => {
     const improvementPercentage = Math.round(
       (improvementInSeconds / time1InSeconds) * 100
     );
-    const improvementText = `Improvement: <span style="color: #f42b5b; font-family: Rubik">${im
+    const improvementText = `Improvement: <span style="color: #f42b5b; font-family: Rubik">${improvementPercentage}% (${formatTime(
+      improvementInSeconds * 1000
+    )})</span>`;
+    improvement.html(improvementText);
+  }
+
+  startStop1.on('click', startStopTimer1);
+  reset1.on('click', resetTimer1);
+
+  startStop2.on('click', startStopTimer2);
+  reset2.on('click', resetTimer2);
+
+  solutionBtn.on('click', () => {
+    window.location.href = 'https://docs
