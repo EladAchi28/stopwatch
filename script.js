@@ -14,7 +14,9 @@ $(document).ready(() => {
     startStop2 = $('#startStop2'),
     reset1 = $('#reset1'),
     reset2 = $('#reset2'),
-    improvement = $('#improvement');
+    improvement = $('#improvement'),
+    calculateImprovementBtn = $('#calculateImprovementBtn'),
+    solutionBtn = $('#solutionBtn');
 
   function updateTime1() {
     const currentTime = Date.now();
@@ -84,28 +86,11 @@ $(document).ready(() => {
     return `${minutes}:${seconds}:${milliseconds}`;
   }
 
-function calculateImprovement() {
-  const time1InSeconds = time1 / 1000;
-  const time2InSeconds = time2 / 1000;
-  const improvementInSeconds = time1InSeconds - time2InSeconds;
-  const improvementPercentage = Math.round(
-    (improvementInSeconds / time1InSeconds) * 100
-  );
-  const improvementText = `Improvement: <span style="color: #f42b5b; font-family: Rubik">${improvementPercentage}% (${formatTime(
-    improvementInSeconds * 1000
-  )})</span>`;
-  improvement.html(improvementText);
-}
-
-
-  startStop1.on('click', startStopTimer1);
-  reset1.on('click', resetTimer1);
-
-  startStop2.on('click', startStopTimer2);
-  reset2.on('click', resetTimer2);
-});
-
-
-solutionBtn.on('click', () => {
-  window.location.href = 'https://docs.google.com/presentation/d/1A7fNQXmaXX3sYC_lhAn2J0t_BhSIFKW3CCDDDgucR08/present?start=true&loop=true&delayms=5000#slide=id.g23a1fb12a21_3_50';
-});
+  function calculateImprovement() {
+    const time1InSeconds = time1 / 1000;
+    const time2InSeconds = time2 / 1000;
+    const improvementInSeconds = time1InSeconds - time2InSeconds;
+    const improvementPercentage = Math.round(
+      (improvementInSeconds / time1InSeconds) * 100
+    );
+    const improvementText = `Improvement: <span style="color: #f42b5b; font-family: Rubik">${im
